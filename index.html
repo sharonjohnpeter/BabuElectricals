@@ -1,50 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Bhabu Electricals - Trusted electrical contractors in Tamil Nadu since 1990. Specializing in HT/LT contracting, solar solutions, industrial electrical services, and commercial electrical works.">
-    <meta name="keywords"
-        content="electrical contractors, electrical services Tamil Nadu, HT LT installation, solar power solutions, industrial electrical, commercial electrical, Bhabu Electricals, electrical contracting company">
+    <meta name="description" content="Bhabu Electricals - Trusted electrical contractors in Tamil Nadu since 1990. Specializing in HT/LT contracting, solar solutions, industrial electrical services, and commercial electrical works.">
+    <meta name="keywords" content="electrical contractors, electrical services Tamil Nadu, HT LT installation, solar power solutions, industrial electrical, commercial electrical, Bhabu Electricals, electrical contracting company">
     <meta name="author" content="Bhabu Electricals">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.bhabuelectricals.com/">
-
+    
     <!-- Open Graph Tags -->
     <meta property="og:title" content="Bhabu Electricals | Trusted Electrical Contractors Since 1990 | Tamil Nadu">
-    <meta property="og:description"
-        content="Delivering reliable, safe, and high-quality electrical contracting solutions for Commercial, Industrial, Textile, Residential, Institutional, HT & Solar Projects.">
+    <meta property="og:description" content="Delivering reliable, safe, and high-quality electrical contracting solutions for Commercial, Industrial, Textile, Residential, Institutional, HT & Solar Projects.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.bhabuelectricals.com/">
-
+    
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Bhabu Electricals | Trusted Electrical Contractors Since 1990">
-    <meta name="twitter:description"
-        content="35+ years of electrical expertise across Tamil Nadu. HT/LT works, industrial solutions, solar power, and panel manufacturing.">
-
+    <meta name="twitter:description" content="35+ years of electrical expertise across Tamil Nadu. HT/LT works, industrial solutions, solar power, and panel manufacturing.">
+    
     <title>Bhabu Electricals | Trusted Electrical Contractors Since 1990 | Tamil Nadu</title>
-
+    
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon"
-        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
-
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
     <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
-
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
     <!-- Font Awesome 6 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
+    
     <!-- AOS Animation Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-
+    
     <link rel="stylesheet" href="index.css">
 </head>
-
 <body>
     <!-- Header / Navigation -->
     <header class="header">
@@ -53,10 +44,15 @@
                 <div class="logo">
                     <a href="index.html">
                         <img src="./images/BE-logo.png" alt="Bhabu Electricals Logo" class="logo-img">
-                        <!-- <span class="logo-text">Bhabu <span class="logo-highlight">Electricals</span></span> -->
                     </a>
                 </div>
-
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                
                 <div class="nav-menu" id="navMenu">
                     <ul class="nav-links">
                         <li><a href="index.html" class="active">Home</a></li>
@@ -66,12 +62,6 @@
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
                     <a href="contact.html" class="btn-consultation">Get Quote <i class="fas fa-arrow-right"></i></a>
-                </div>
-
-                <div class="hamburger" id="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
                 </div>
             </nav>
         </div>
@@ -92,12 +82,11 @@
                     <span>✦</span> TN Grade Electrical Contractor — Since 1990
                 </div>
                 <h1>Powering <em>Trusted</em> Spaces Across Tamil Nadu Since 1990</h1>
-                <p>Delivering reliable, safe, and high-quality electrical contracting solutions for Commercial,
-                    Industrial, Textile, Residential, Institutional, HT & Solar Projects.</p>
+                <p>Delivering reliable, safe, and high-quality electrical contracting solutions for Commercial, Industrial, Textile, Residential, Institutional, HT & Solar Projects.</p>
                 <div class="hero-btns">
                     <a href="contact.html" class="btn-primary"><i class="fas fa-bolt"></i> Get Free Consultation</a>
                     <a href="projects.html" class="btn-outline"><i class="fas fa-play"></i> View Our Projects</a>
-                    <!--     -->
+                    <a href="contact.html" class="btn-outline"><i class="fas fa-envelope"></i> Contact Us</a>
                 </div>
             </div>
             <div class="hero-icon-float" data-aos="fade-left" data-aos-delay="500">
@@ -109,43 +98,25 @@
     <!-- SERVICE TICKER -->
     <div class="service-ticker">
         <div class="ticker-track" id="ticker">
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-bolt"></i> Electrical
-                Contracting</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-drafting-compass"></i> Design &
-                Estimation</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-microchip"></i> Panel
-                Manufacturing</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-tools"></i> PMC &
-                Maintenance</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-charging-station"></i> HT/LT
-                Installation</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-industry"></i> Industrial
-                Wiring</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-chart-line"></i> Energy
-                Audit</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-solar-panel"></i> Solar
-                Power</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-fire-extinguisher"></i> Fire &
-                Safety Systems</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-bolt"></i> Electrical Contracting</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-drafting-compass"></i> Design & Estimation</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-microchip"></i> Panel Manufacturing</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-tools"></i> PMC & Maintenance</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-charging-station"></i> HT/LT Installation</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-industry"></i> Industrial Wiring</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-chart-line"></i> Energy Audit</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-solar-panel"></i> Solar Power</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-fire-extinguisher"></i> Fire & Safety Systems</span>
             <!-- Duplicate for seamless scrolling -->
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-bolt"></i> Electrical
-                Contracting</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-drafting-compass"></i> Design &
-                Estimation</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-microchip"></i> Panel
-                Manufacturing</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-tools"></i> PMC &
-                Maintenance</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-charging-station"></i> HT/LT
-                Installation</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-industry"></i> Industrial
-                Wiring</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-chart-line"></i> Energy
-                Audit</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-solar-panel"></i> Solar
-                Power</span>
-            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-fire-extinguisher"></i> Fire &
-                Safety Systems</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-bolt"></i> Electrical Contracting</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-drafting-compass"></i> Design & Estimation</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-microchip"></i> Panel Manufacturing</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-tools"></i> PMC & Maintenance</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-charging-station"></i> HT/LT Installation</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-industry"></i> Industrial Wiring</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-chart-line"></i> Energy Audit</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-solar-panel"></i> Solar Power</span>
+            <span class="ticker-item"><span class="ticker-dot"></span><i class="fas fa-fire-extinguisher"></i> Fire & Safety Systems</span>
         </div>
     </div>
 
@@ -176,8 +147,7 @@
                 <div class="about-img-wrap" data-aos="fade-right">
                     <div class="about-img-card">
                         <div class="about-img-person">
-                            <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=500&fit=crop"
-                                alt="Bhabu Electricals Team" class="about-person-img">
+                            <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=500&fit=crop" alt="Bhabu Electricals Team" class="about-person-img">
                         </div>
                         <div class="about-img-label">Bhabu Electricals</div>
                     </div>
@@ -189,12 +159,8 @@
                 <div class="about-text" data-aos="fade-left">
                     <span class="section-label">MOST TRUSTED BUSINESS</span>
                     <h2>Three decades of <em>trusted</em> electrical expertise.</h2>
-                    <p>Founded in 1990, Bhabu Electricals is one of Tamil Nadu's trusted electrical contracting and
-                        manpower companies with over three decades of expertise in delivering dependable electrical
-                        services.</p>
-                    <p>We serve the B2B & B2C market levels, delivering all commercial, institutional, solar, and
-                        industrial sectors with complete end-to-end services, empowering every project with precision,
-                        professionalism, and long-term reliability.</p>
+                    <p>Founded in 1990, Bhabu Electricals is one of Tamil Nadu's trusted electrical contracting and manpower companies with over three decades of expertise in delivering dependable electrical services.</p>
+                    <p>We serve the B2B & B2C market levels, delivering all commercial, institutional, solar, and industrial sectors with complete end-to-end services, empowering every project with precision, professionalism, and long-term reliability.</p>
                     <ul class="about-checks">
                         <li>
                             <div class="check-icon"><i class="fas fa-check"></i></div>
@@ -231,8 +197,7 @@
                 <div class="service-card electric-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="service-icon"><i class="fas fa-bolt"></i></div>
                     <h3>HT & LT Electrical Contracting</h3>
-                    <p>Comprehensive high and low tension electrical contracting services across industrial and
-                        commercial sectors.</p>
+                    <p>Comprehensive high and low tension electrical contracting services across industrial and commercial sectors.</p>
                     <div class="service-tags">
                         <span>HT Installation</span>
                         <span>LT Works</span>
@@ -243,8 +208,7 @@
                 <div class="service-card electric-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="service-icon"><i class="fas fa-industry"></i></div>
                     <h3>Industrial Electrical Solutions</h3>
-                    <p>Efficient services across all heavy-duty industrial sectors including manufacturing and
-                        processing facilities.</p>
+                    <p>Efficient services across all heavy-duty industrial sectors including manufacturing and processing facilities.</p>
                     <div class="service-tags">
                         <span>Factory Setup</span>
                         <span>Machinery Wiring</span>
@@ -255,8 +219,7 @@
                 <div class="service-card electric-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="service-icon"><i class="fas fa-building"></i></div>
                     <h3>Commercial Electrical Works</h3>
-                    <p>Full-scale commercial electrical works covering offices, retail spaces, malls, and commercial
-                        complexes.</p>
+                    <p>Full-scale commercial electrical works covering offices, retail spaces, malls, and commercial complexes.</p>
                     <div class="service-tags">
                         <span>Office Spaces</span>
                         <span>Retail Outlets</span>
@@ -267,8 +230,7 @@
                 <div class="service-card electric-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="service-icon"><i class="fas fa-solar-panel"></i></div>
                     <h3>Solar Power Solutions</h3>
-                    <p>Complete solar energy design, supply, installation and maintenance for residential and commercial
-                        projects.</p>
+                    <p>Complete solar energy design, supply, installation and maintenance for residential and commercial projects.</p>
                     <div class="service-tags">
                         <span>On-Grid Solar</span>
                         <span>Off-Grid Solar</span>
@@ -279,8 +241,7 @@
                 <div class="service-card electric-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="service-icon"><i class="fas fa-drafting-compass"></i></div>
                     <h3>Electrical Design & Consultancy</h3>
-                    <p>Professional consultancy, estimation, load analysis, and complete engineering design for all
-                        scales.</p>
+                    <p>Professional consultancy, estimation, load analysis, and complete engineering design for all scales.</p>
                     <div class="service-tags">
                         <span>Load Calculation</span>
                         <span>Estimation</span>
@@ -313,8 +274,7 @@
                 <div class="service-card electric-card" data-aos="fade-up" data-aos-delay="700">
                     <div class="service-icon"><i class="fas fa-tools"></i></div>
                     <h3>Electrical Maintenance Services</h3>
-                    <p>Scheduled preventive and emergency maintenance to ensure continuous, uninterrupted electrical
-                        operations.</p>
+                    <p>Scheduled preventive and emergency maintenance to ensure continuous, uninterrupted electrical operations.</p>
                     <div class="service-tags">
                         <span>Preventive</span>
                         <span>Emergency</span>
@@ -340,14 +300,12 @@
                 <div class="why-card" data-aos="fade-up" data-aos-delay="0">
                     <div class="why-num"><i class="fas fa-hourglass-half"></i></div>
                     <h3>35+ Years of Proven Expertise</h3>
-                    <p>Decades of hands-on experience across Tamil Nadu delivering quality-first electrical solutions on
-                        every project.</p>
+                    <p>Decades of hands-on experience across Tamil Nadu delivering quality-first electrical solutions on every project.</p>
                 </div>
                 <div class="why-card" data-aos="fade-up" data-aos-delay="100">
                     <div class="why-num"><i class="fas fa-users"></i></div>
                     <h3>Experienced Technical Team</h3>
-                    <p>Our qualified engineers and technicians ensure every project is executed with precision and
-                        professionalism.</p>
+                    <p>Our qualified engineers and technicians ensure every project is executed with precision and professionalism.</p>
                 </div>
                 <div class="why-card" data-aos="fade-up" data-aos-delay="200">
                     <div class="why-num"><i class="fas fa-shield-alt"></i></div>
@@ -357,20 +315,17 @@
                 <div class="why-card" data-aos="fade-up" data-aos-delay="300">
                     <div class="why-num"><i class="fas fa-calendar-check"></i></div>
                     <h3>Timely Project Completion</h3>
-                    <p>We plan and execute all projects efficiently, meeting deadlines with zero compromises on quality.
-                    </p>
+                    <p>We plan and execute all projects efficiently, meeting deadlines with zero compromises on quality.</p>
                 </div>
                 <div class="why-card" data-aos="fade-up" data-aos-delay="400">
                     <div class="why-num"><i class="fas fa-cogs"></i></div>
                     <h3>End-to-End Solutions</h3>
-                    <p>From design to installation and maintenance, we handle every stage of your electrical project.
-                    </p>
+                    <p>From design to installation and maintenance, we handle every stage of your electrical project.</p>
                 </div>
                 <div class="why-card" data-aos="fade-up" data-aos-delay="500">
                     <div class="why-num"><i class="fas fa-chart-bar"></i></div>
                     <h3>Multi-Sector Experience</h3>
-                    <p>Spanning textile, industrial, healthcare, educational, commercial, and residential sectors across
-                        the region.</p>
+                    <p>Spanning textile, industrial, healthcare, educational, commercial, and residential sectors across the region.</p>
                 </div>
             </div>
         </div>
@@ -416,89 +371,13 @@
         </div>
     </section>
 
-    <!-- PROJECTS SECTION -->
-    <section class="projects" id="projects">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="label">FEATURED PROJECTS</span>
-                <h2>Our <em>Featured</em> Projects</h2>
-            </div>
-            <div class="projects-grid">
-                <div class="project-card pc-navy" data-aos="fade-up" data-aos-delay="0">
-                    <div class="project-bg"><img
-                            src="https://images.unsplash.com/photo-1535905554592-2e8e137b4e7d?w=400&h=200&fit=crop"
-                            alt="Textile Project"></div>
-                    <div class="project-content">
-                        <div class="project-tag">Textile Sector</div>
-                        <h3>Textile & Retail Projects</h3>
-                        <p>Electrical solutions for leading textile businesses and retail environments.</p>
-                    </div>
-                </div>
-                <div class="project-card pc-blue" data-aos="fade-up" data-aos-delay="100">
-                    <div class="project-bg"><img
-                            src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=400&h=200&fit=crop"
-                            alt="Industrial Project"></div>
-                    <div class="project-content">
-                        <div class="project-tag">Industrial Sector</div>
-                        <h3>Industrial Projects</h3>
-                        <p>Reliable electrical infrastructure for manufacturing and industrial facilities.</p>
-                    </div>
-                </div>
-                <div class="project-card pc-mid" data-aos="fade-up" data-aos-delay="200">
-                    <div class="project-bg"><img
-                            src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=200&fit=crop"
-                            alt="Educational Institution"></div>
-                    <div class="project-content">
-                        <div class="project-tag">Education</div>
-                        <h3>Educational Institutions</h3>
-                        <p>Electrical requirements for schools, colleges, and universities.</p>
-                    </div>
-                </div>
-                <div class="project-card pc-teal" data-aos="fade-up" data-aos-delay="300">
-                    <div class="project-bg"><img
-                            src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=400&h=200&fit=crop"
-                            alt="Healthcare Project"></div>
-                    <div class="project-content">
-                        <div class="project-tag">Healthcare</div>
-                        <h3>Healthcare Projects</h3>
-                        <p>Critical electrical systems for hospitals and healthcare institutions.</p>
-                    </div>
-                </div>
-                <div class="project-card pc-dark" data-aos="fade-up" data-aos-delay="400">
-                    <div class="project-bg"><img
-                            src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=400&h=200&fit=crop"
-                            alt="Commercial Building"></div>
-                    <div class="project-content">
-                        <div class="project-tag">Commercial</div>
-                        <h3>Commercial Buildings</h3>
-                        <p>Full electrical contracting, commercial complexes, and business spaces.</p>
-                    </div>
-                </div>
-                <div class="project-card pc-steel" data-aos="fade-up" data-aos-delay="500">
-                    <div class="project-bg"><img
-                            src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=400&h=200&fit=crop"
-                            alt="Infrastructure Project"></div>
-                    <div class="project-content">
-                        <div class="project-tag">Infrastructure</div>
-                        <h3>Infrastructure & HT Projects</h3>
-                        <p>High tension installations and large-scale infrastructure projects.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="projects-cta" data-aos="fade-up">
-                <a href="projects.html" class="btn-primary"><i class="fas fa-arrow-right"></i> Explore All Projects</a>
-            </div>
-        </div>
-    </section>
-
     <!-- TRUSTED BRANDS SECTION -->
     <section class="trusted-brands">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
                 <span class="label">OUR TRUSTED PARTNERS</span>
                 <h2>Trusted By Leading <em>Brands & Institutions</em></h2>
-                <p>Bhabu Electricals has successfully served leading industries, hospitals, educational organizations
-                    and commercial brands across Tamil Nadu.</p>
+                <p>Bhabu Electricals has successfully served leading industries, hospitals, educational organizations and commercial brands across Tamil Nadu.</p>
             </div>
             <div class="brands-scroll" data-aos="fade-up">
                 <div class="scroll-track">
@@ -522,66 +401,16 @@
         </div>
     </section>
 
-    <!-- TESTIMONIALS SECTION -->
-    <section class="testimonials">
-        <div class="container">
-            <div class="section-header" data-aos="fade-up">
-                <span class="label">TESTIMONIALS</span>
-                <h2>What Our <em>Clients</em> Say</h2>
-            </div>
-            <div class="testimonials-grid">
-                <div class="testi-card" data-aos="fade-up" data-aos-delay="0">
-                    <div class="testi-stars">★★★★★</div>
-                    <p class="testi-quote">Professional execution and timely completion. Bhabu Electricals delivered our
-                        industrial project on time with impeccable quality standards. Highly recommended.</p>
-                    <div class="testi-author">
-                        <div class="testi-avatar">RK</div>
-                        <div>
-                            <div class="testi-name">Rajesh Kumar</div>
-                            <div class="testi-role">Factory Manager, Coimbatore</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-card" data-aos="fade-up" data-aos-delay="200">
-                    <div class="testi-stars">★★★★★</div>
-                    <p class="testi-quote">Reliable and technically strong team. Their expertise in HT installations and
-                        panel work is exceptional. Work quality and site safety is consistently excellent.</p>
-                    <div class="testi-author">
-                        <div class="testi-avatar">SM</div>
-                        <div>
-                            <div class="testi-name">Subramanian M.</div>
-                            <div class="testi-role">CEO, Tamil Nadu Textiles</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testi-card" data-aos="fade-up" data-aos-delay="400">
-                    <div class="testi-stars">★★★★★</div>
-                    <p class="testi-quote">One of the finest electrical contractors we have worked with. Their solar
-                        installation was completed ahead of schedule with considerable cost savings.</p>
-                    <div class="testi-author">
-                        <div class="testi-avatar">AP</div>
-                        <div>
-                            <div class="testi-name">Anand Prakash</div>
-                            <div class="testi-role">Principal, Educational Institution</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- CTA BANNER -->
     <section class="cta-banner">
         <div class="container">
             <div class="cta-content" data-aos="fade-up">
                 <div class="cta-icon"><i class="fas fa-bolt"></i></div>
                 <h2>Looking for Reliable <em>Electrical Contractor</em> Solutions?</h2>
-                <p>Partner with Bhabu Electricals for safe, efficient, and future-ready electrical infrastructure across
-                    Tamil Nadu.</p>
+                <p>Partner with Bhabu Electricals for safe, efficient, and future-ready electrical infrastructure across Tamil Nadu.</p>
                 <div class="cta-btns">
                     <a href="contact.html" class="btn-primary"><i class="fas fa-bolt"></i> Request a Quote</a>
-                    <a href="tel:+919999999999" class="btn-outline"><i class="fas fa-phone-alt"></i> Contact Our
-                        Team</a>
+                    <a href="tel:+919003434422" class="btn-outline"><i class="fas fa-phone-alt"></i> Contact Our Team</a>
                 </div>
             </div>
         </div>
@@ -628,18 +457,15 @@
                 <div class="footer-col">
                     <h4>Contact Info</h4>
                     <ul class="contact-info">
-                        <li><i class="fas fa-map-marker-alt"></i> #54, Gandhi Nagar East, Sri Nagar Colony, Kumbakonam –
-                            612001</li>
-                        <li><i class="fas fa-map-marker-alt"></i> #3, SUS Palace, Vivekanandhar Street, Srinivasa Nagar,
-                            New Perungalathur, Chennai – 600063</li>
+                        <li><i class="fas fa-map-marker-alt"></i> #54, Gandhi Nagar East, Sri Nagar Colony, Kumbakonam – 612001</li>
+                        <li><i class="fas fa-map-marker-alt"></i> #3, SUS Palace, Vivekanandhar Street, New Perungalathur, Chennai – 600063</li>
                         <li><i class="fas fa-phone"></i> +91 90034 34422</li>
-                        <li><i class="fas fa-envelope"></i>bhabuelectricals@gmail.com</li>
+                        <li><i class="fas fa-envelope"></i> bhabuelectricals@gmail.com</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2026 Bhabu Electricals. All rights reserved. | Designed with <i class="fas fa-heart"></i> in
-                    Tamil Nadu</p>
+                <p>&copy; 2026 Bhabu Electricals. All rights reserved. | Designed with <i class="fas fa-heart"></i> in Tamil Nadu</p>
                 <p class="footer-tagline">ELECTRICAL CONTRACTING · DESIGN · PANEL MANUFACTURING</p>
             </div>
         </div>
@@ -662,50 +488,41 @@
             once: true,
             offset: 100
         });
-
+        
         // Mobile Menu Toggle
         const hamburger = document.getElementById('hamburger');
         const navMenu = document.getElementById('navMenu');
-
+        
         hamburger.addEventListener('click', () => {
             hamburger.classList.toggle('active');
             navMenu.classList.toggle('active');
+            document.body.style.overflow = navMenu.classList.contains('active') ? 'hidden' : '';
         });
-
+        
         // Close mobile menu when clicking on a link
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 hamburger.classList.remove('active');
                 navMenu.classList.remove('active');
+                document.body.style.overflow = '';
             });
         });
-
-        // Sticky Header - Change nav link colors when scrolled
-        window.addEventListener('scroll', () => {
-            const header = document.querySelector('.header');
-            if (window.scrollY > 100) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
+        
         // Counter Animation
         const counters = document.querySelectorAll('.counter');
-        const speed = 100;
-
+        
         const startCounter = () => {
             counters.forEach(counter => {
                 const target = parseInt(counter.getAttribute('data-target'));
                 let count = 0;
-                const increment = Math.ceil(target / speed);
-
+                const increment = Math.ceil(target / 80);
+                
                 const updateCount = () => {
                     if (count < target) {
                         count += increment;
                         if (count > target) count = target;
                         counter.innerText = count;
-                        setTimeout(updateCount, 30);
+                        setTimeout(updateCount, 25);
                     } else {
                         counter.innerText = target;
                     }
@@ -713,12 +530,12 @@
                 updateCount();
             });
         };
-
+        
         // Trigger counter when in viewport
         const observerOptions = {
             threshold: 0.5
         };
-
+        
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -727,15 +544,15 @@
                 }
             });
         }, observerOptions);
-
+        
         const statSection = document.querySelector('.stats-bar');
         if (statSection) {
             observer.observe(statSection);
         }
-
+        
         // Add electric wave effect on cards
         document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', function (e) {
+            card.addEventListener('mouseenter', function(e) {
                 const wave = this.querySelector('.electric-wave');
                 if (wave) {
                     wave.style.animation = 'none';
@@ -745,11 +562,10 @@
                 }
             });
         });
-
-        // Back to Top Button with Charging Animation
+        
+        // Back to Top Button
         const backToTopBtn = document.getElementById('backToTop');
-
-        // Show/hide button based on scroll position
+        
         window.addEventListener('scroll', () => {
             if (window.scrollY > 300) {
                 backToTopBtn.classList.add('show');
@@ -757,15 +573,13 @@
                 backToTopBtn.classList.remove('show');
             }
         });
-
-        // Smooth scroll to top when clicked
+        
         backToTopBtn.addEventListener('click', () => {
             window.scrollTo({
                 top: 0,
                 behavior: 'smooth'
             });
-        }); 
+        });
     </script>
 </body>
-
 </html>
