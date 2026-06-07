@@ -1,0 +1,11 @@
+{
+    "name": "bhabu-electricals/contact-form",
+    "description": "Contact form with PHPMailer SMTP for Bhabu Electricals website",
+    "type": "project",
+    "require": {
+        "phpmailer/phpmailer": "^6.8"
+    },
+    "config": {
+        "optimize-autoloader": true
+    }
+}
