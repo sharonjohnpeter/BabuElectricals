@@ -412,6 +412,328 @@
     }
 }
 
+/* Back to Top Button with Charging Animation */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+.charging-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-orange, #F26522), var(--primary-blue, #2196F3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.charging-circle i {
+    font-size: 1.5rem;
+    color: white;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+
+.back-to-top:hover .charging-circle i {
+    transform: translateY(-3px);
+}
+
+/* Charging Animation Effect */
+.charging-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent);
+    animation: charge 2s ease-in-out infinite;
+}
+
+@keyframes charge {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Pulsing ring effect */
+.charging-circle::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-orange, #F26522), var(--primary-blue, #2196F3));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.back-to-top:hover .charging-circle::before {
+    opacity: 1;
+    animation: pulse-ring 1s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* Tooltip */
+.tooltip-text {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: var(--primary-green-dark, #1A4A3A);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.tooltip-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-green-dark, #1A4A3A);
+    transform: rotate(45deg);
+}
+
+.back-to-top:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    bottom: 65px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .charging-circle i {
+        font-size: 1.2rem;
+    }
+    
+    .tooltip-text {
+        display: none;
+    }
+}
+
+/* Back to Top Button with Charging Animation */
+.back-to-top {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 999;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    padding: 0;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.back-to-top:hover {
+    transform: translateY(-5px);
+}
+
+.charging-circle {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-orange, #F26522), var(--primary-blue, #2196F3));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(33, 150, 243, 0.3);
+}
+
+.charging-circle i {
+    font-size: 1.5rem;
+    color: white;
+    z-index: 2;
+    transition: transform 0.3s;
+}
+
+.back-to-top:hover .charging-circle i {
+    transform: translateY(-3px);
+}
+
+/* Charging Animation Effect */
+.charging-effect {
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, 
+        transparent, 
+        rgba(255, 255, 255, 0.4), 
+        transparent);
+    animation: charge 2s ease-in-out infinite;
+}
+
+@keyframes charge {
+    0% {
+        left: -100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Pulsing ring effect */
+.charging-circle::before {
+    content: '';
+    position: absolute;
+    top: -3px;
+    left: -3px;
+    right: -3px;
+    bottom: -3px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-orange, #F26522), var(--primary-blue, #2196F3));
+    z-index: -1;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.back-to-top:hover .charging-circle::before {
+    opacity: 1;
+    animation: pulse-ring 1s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+    100% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+}
+
+/* Tooltip */
+.tooltip-text {
+    position: absolute;
+    bottom: 70px;
+    right: 0;
+    background: var(--primary-green-dark, #1A4A3A);
+    color: white;
+    padding: 5px 12px;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    white-space: nowrap;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s;
+    pointer-events: none;
+}
+
+.tooltip-text::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    right: 20px;
+    width: 10px;
+    height: 10px;
+    background: var(--primary-green-dark, #1A4A3A);
+    transform: rotate(45deg);
+}
+
+.back-to-top:hover .tooltip-text {
+    opacity: 1;
+    visibility: visible;
+    bottom: 65px;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .back-to-top {
+        bottom: 20px;
+        right: 20px;
+        width: 45px;
+        height: 45px;
+    }
+    
+    .charging-circle i {
+        font-size: 1.2rem;
+    }
+    
+    .tooltip-text {
+        display: none;
+    }
+}
+
 /* FAQ Section */
 .faq-section {
     padding: 90px 0;

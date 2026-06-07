@@ -370,10 +370,14 @@
         </div>
     </footer>
 
-    <!-- WhatsApp Float Button -->
-    <a href="https://wa.me/919999999999" class="whatsapp-float" target="_blank">
-        <i class="fab fa-whatsapp"></i>
-    </a>
+    <!-- Back to Top Button with Charging Animation -->
+<button id="backToTop" class="back-to-top">
+    <div class="charging-circle">
+        <div class="charging-effect"></div>
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <span class="tooltip-text">Back to Top</span>
+</button>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
@@ -453,6 +457,26 @@
         if (statSection) {
             observer.observe(statSection);
         }
+
+        // Back to Top Button with Charging Animation
+const backToTopBtn = document.getElementById('backToTop');
+
+// Show/hide button based on scroll position
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 300) {
+        backToTopBtn.classList.add('show');
+    } else {
+        backToTopBtn.classList.remove('show');
+    }
+});
+
+// Smooth scroll to top when clicked
+backToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+});
     </script>
 </body>
 </html>

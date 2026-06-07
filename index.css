@@ -399,12 +399,18 @@ h1, h2, h3, h4, h5, h6 {
 .hamburger span {
     width: 25px;
     height: 3px;
-    background: var(--white);
+    background: var(--white);  /* Changed from var(--navy) to white for visibility on hero */
     margin: 3px 0;
     transition: var(--transition);
 }
 
+/* When header is scrolled, change hamburger color to dark */
 .header.scrolled .hamburger span {
+    background: var(--navy);
+}
+
+/* For mobile menu open state, keep hamburger visible */
+.hamburger.active span {
     background: var(--navy);
 }
 
