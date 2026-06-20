@@ -39,7 +39,7 @@
 
 /* Featured Projects Section */
 .featured-projects {
-    padding: 90px 0;
+    padding: 50px 0;
     background: var(--white);
 }
 
@@ -740,6 +740,135 @@
     letter-spacing: 1px;
     color: var(--primary-orange);
     font-weight: 500;
+}
+
+/* ==================== FILTER SECTION ==================== */
+.filter-section {
+    padding: 40px 0 20px;
+    background: var(--white);
+    position: sticky;
+    top: 80px;
+    z-index: 50;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.filter-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 0 10px;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border: 2px solid var(--border);
+    border-radius: 30px;
+    background: var(--white);
+    color: var(--text-mid);
+    font-weight: 600;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'DM Sans', sans-serif;
+    white-space: nowrap;
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-orange);
+    color: var(--primary-orange);
+    transform: translateY(-2px);
+}
+
+.filter-btn.active {
+    background: var(--primary-orange);
+    color: var(--white);
+    border-color: var(--primary-orange);
+    box-shadow: 0 4px 15px rgba(242, 101, 34, 0.3);
+}
+
+/* No Results */
+.no-results {
+    text-align: center;
+    padding: 60px 20px;
+    grid-column: 1 / -1;
+}
+
+.no-results i {
+    font-size: 3rem;
+    color: var(--text-light);
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+.no-results h3 {
+    font-size: 1.5rem;
+    color: var(--navy);
+    margin-bottom: 10px;
+}
+
+.no-results p {
+    color: var(--text-light);
+    font-size: 1rem;
+}
+
+/* Animation for filtered items */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.project-showcase-card {
+    animation: fadeInUp 0.5s ease forwards;
+}
+
+/* Mobile responsive for filter buttons */
+@media (max-width: 768px) {
+    .filter-section {
+        padding: 20px 0 10px;
+        top: 70px;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+    
+    .filter-buttons {
+        flex-wrap: nowrap;
+        justify-content: flex-start;
+        padding: 0 15px;
+        gap: 8px;
+        overflow-x: auto;
+        scrollbar-width: none;
+        -ms-overflow-style: none;
+    }
+    
+    .filter-buttons::-webkit-scrollbar {
+        display: none;
+    }
+    
+    .filter-btn {
+        padding: 8px 16px;
+        font-size: 0.75rem;
+        flex-shrink: 0;
+        border-radius: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .filter-section {
+        top: 60px;
+        padding: 15px 0 8px;
+    }
+    
+    .filter-btn {
+        padding: 6px 14px;
+        font-size: 0.7rem;
+    }
 }
 
 /* Responsive Adjustments */

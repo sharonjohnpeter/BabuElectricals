@@ -57,9 +57,366 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="projects.html">Projects</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
+                        <li><a href="ourteam.html" class="active">Our Team</a></li>
                     </ul>
-                    <a href="contact.html" class="btn-consultation">Get Quote <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn-consultation">Contact Us <i class="fas fa-arrow-right"></i></a>
+                </div>
+                
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Page Hero Banner -->
+    <section class="contact-hero">
+        <div class="hero-bg-circles">
+            <div class="circle-1"></div>
+            <div class="circle-2"></div>
+            <div class="circle-3"></div>
+            <div class="circle-4"></div>
+        </div>
+        <div class="hero-grid-lines"></div>
+        <div class="container">
+            <div class="contact-hero-content" data-aos="fade-up" data-aos-duration="1000">
+                <div class="hero-badge">
+                    <span>✦</span> CONTACT US
+                </div>
+                <h1>Let's Power Your <em>Next Project</em></h1>
+                <p>We would be happy to discuss your project requirements and provide reliable electrical solutions tailored to your needs.</p>
+            </div>
+        </div>
+        <div class="hero-icon-float">
+            <div class="inner"><i class="fas fa-bolt"></i></div>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-cards">
+        <div class="container">
+            <div class="info-cards-grid">
+                <div class="info-card" data-aos="fade-up" data-aos-delay="0">
+                    <div class="info-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Corporate Office</h3>
+                    <p>#54, Gandhi Nagar East,<br>Sri Nagar Colony,<br>Kumbakonam – 612001</p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="info-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Branch Office</h3>
+                    <p>#3, SUS Palace,<br>Vivekanandhar Street, Srinivasa Nagar,<br>New Perungalathur, Chennai – 600063</p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="info-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p><a href="tel:+919003434422">+91 90034 34422</a></p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="info-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p><a href="https://wa.me/919003434422">+91 90034 34422</a></p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="400">
+                    <div class="info-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:bhabuelectricals@gmail.com">bhabuelectricals@gmail.com</a></p>
+                </div>
+                <div class="info-card" data-aos="fade-up" data-aos-delay="500">
+                    <div class="info-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Working Hours</h3>
+                    <p>Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form & Map Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="form-map-grid">
+                <!-- Contact Form -->
+                <div class="contact-form-container" data-aos="fade-right">
+                    <div class="form-header">
+                        <span class="section-label">SEND US AN ENQUIRY</span>
+                        <h2>Get In <em>Touch</em></h2>
+                        <p>We respond within one business day.</p>
+                    </div>
+                    
+                    <form id="contactForm" class="contact-form" action="sendmail.php" method="POST">
+                        <div class="form-group">
+                            <label for="name">Your Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                            <i class="fas fa-user form-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="phone">Phone Number <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+                            <i class="fas fa-phone-alt form-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email">Email Address <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+                            <i class="fas fa-envelope form-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="service">Service Required <span class="required">*</span></label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="HT & LT Electrical Contracting">HT & LT Electrical Contracting</option>
+                                <option value="Industrial Electrical Solutions">Industrial Electrical Solutions</option>
+                                <option value="Commercial Electrical Works">Commercial Electrical Works</option>
+                                <option value="Solar Power Solutions">Solar Power Solutions</option>
+                                <option value="Electrical Design & Consultancy">Electrical Design & Consultancy</option>
+                                <option value="Panel Board Installation">Panel Board Installation</option>
+                                <option value="Fire Alarm & Safety Systems">Fire Alarm & Safety Systems</option>
+                                <option value="Electrical Maintenance Services">Electrical Maintenance Services</option>
+                            </select>
+                            <i class="fas fa-chevron-down form-icon"></i>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message">Project Details <span class="required">*</span></label>
+                            <textarea id="message" name="message" rows="5" placeholder="Tell us about your project requirements..." required></textarea>
+                            <i class="fas fa-pencil-alt form-icon"></i>
+                        </div>
+                        
+                        <button type="submit" class="btn-submit" id="submitBtn">
+                            <span class="btn-text">Submit Enquiry</span>
+                            <span class="btn-loader" style="display: none;">
+                                <i class="fas fa-spinner fa-spin"></i> Sending...
+                            </span>
+                        </button>
+                    </form>
+                </div>
+                
+                <!-- Map Section -->
+                <div class="map-container" data-aos="fade-left">
+                    <div class="map-header">
+                        <h3>Find Us Here</h3>
+                    </div>
+                    <div class="map-wrapper">
+                        <h4><i class="fas fa-map-marker-alt"></i>Corporate Office Location</h4>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.123456789012!2d79.4165!3d10.9605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3baa8b8b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sKumbakonam%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="300" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                    <div class="branch-location">
+                        <h4><i class="fas fa-map-marker-alt"></i> Branch Office Location</h4>
+                        <iframe 
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3887.123456789012!2d80.1005!3d12.9505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a525f8b8b8b8b8b%3A0x8b8b8b8b8b8b8b8b!2sPerungalathur%2C%20Chennai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1700000000000!5m2!1sen!2sin" 
+                            width="100%" 
+                            height="250" 
+                            style="border:0;" 
+                            allowfullscreen="" 
+                            loading="lazy" 
+                            referrerpolicy="no-referrer-when-downgrade">
+                        </iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Contact Banner -->
+    <section class="quick-contact">
+        <div class="container">
+            <div class="quick-contact-grid">
+                <div class="quick-contact-item" data-aos="fade-up" data-aos-delay="0">
+                    <i class="fas fa-phone-alt"></i>
+                    <div>
+                        <h4>Call Us</h4>
+                        <a href="tel:+919003434422">+91 90034 34422</a>
+                    </div>
+                </div>
+                <div class="quick-contact-item" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fab fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp</h4>
+                        <a href="https://wa.me/919003434422">Chat with us</a>
+                    </div>
+                </div>
+                <div class="quick-contact-item" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fas fa-envelope"></i>
+                    <div>
+                        <h4>Email Us</h4>
+                        <a href="mailto:bhabuelectricals@gmail.com">bhabuelectricals@gmail.com</a>
+                    </div>
+                </div>
+                <div class="quick-contact-item" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fas fa-clock"></i>
+                    <div>
+                        <h4>Working Hours</h4>
+                        <span>Mon-Sat: 9AM - 6PM</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Banner -->
+    <section class="cta-banner">
+        <div class="container">
+            <div class="cta-content" data-aos="fade-up">
+                <div class="cta-icon"><i class="fas fa-bolt"></i></div>
+                <h2>Looking for Reliable <em>Electrical Contracting</em> Solutions?</h2>
+                <p>Partner with Bhabu Electricals for safe, efficient, and future-ready electrical infrastructure.</p>
+                <div class="cta-btns">
+                    <a href="#contactForm" class="btn-primary"><i class="fas fa-bolt"></i> Request a Quote</a>
+                    <a href="tel:+919003434422" class="btn-outline"><i class="fas fa-phone-alt"></i> Call Our Team</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="footer-logo">
+                        <img src="./images/BE-logo.png" alt="Bhabu Electricals Logo" class="footer-logo-img">
+                    </div>
+                    <p>Trusted Electrical Contracting & Engineering Solutions Since 1990.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Our Services</h4>
+                    <ul>
+                        <li><a href="#">HT & LT Works</a></li>
+                        <li><a href="#">Industrial Electrical</a></li>
+                        <li><a href="#">Commercial Solutions</a></li>
+                        <li><a href="#">Solar Power</a></li>
+                        <li><a href="#">Design Consultancy</a></li>
+                        <li><a href="#">Panel Manufacturing</a></li>
+                        <li><a href="#">Maintenance Services</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact Info</h4>
+                    <ul class="contact-info">
+                        <li><i class="fas fa-map-marker-alt"></i> #54, Gandhi Nagar East, Sri Nagar Colony, Kumbakonam – 612001</li>
+                        <li><i class="fas fa-map-marker-alt"></i> #3, SUS Palace, Vivekanandhar Street, Srinivasa Nagar, New Perungalathur, Chennai – 600063</li>
+                        <li><i class="fas fa-phone"></i> +91 90034 34422</li>
+                        <li><i class="fas fa-envelope"></i>bhabuelectricals@gmail.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Bhabu Electricals. All rights reserved. | Designed with <i class="fas fa-heart"></i> in Tamil Nadu</p>
+                <p class="footer-tagline">ELECTRICAL CONTRACTING · DESIGN · PANEL MANUFACTURING</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top Button with Charging Animation -->
+<button id="backToTop" class="back-to-top">
+    <div class="charging-circle">
+        <div class="charging-effect"></div>
+        <i class="fas fa-arrow-up"></i>
+    </div>
+    <span class="tooltip-text">Back to Top</span>
+</button>
+
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Bhabu Electricals for reliable electrical contracting services in Tamil Nadu. Get a free quote for HT/LT works, industrial electrical, solar solutions, and more.">
+    <meta name="keywords" content="contact Bhabu Electricals, electrical contractor contact, electrical services enquiry, quote for electrical work, Tamil Nadu electrical contractor">
+    <meta name="author" content="Bhabu Electricals">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.bhabuelectricals.com/contact.html">
+    
+    <!-- Open Graph Tags -->
+    <meta property="og:title" content="Contact Us | Bhabu Electricals - Get a Free Quote | Tamil Nadu">
+    <meta property="og:description" content="Get in touch with Bhabu Electricals for reliable electrical contracting solutions. We respond within one business day.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.bhabuelectricals.com/contact.html">
+    
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Contact Us | Bhabu Electricals">
+    <meta name="twitter:description" content="Contact us for a free quote on your electrical project.">
+    
+    <title>Contact Us | Bhabu Electricals - Get a Free Quote | Tamil Nadu</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome 6 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header class="header">
+        <div class="container">
+            <nav class="navbar">
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="./images/BE-logo.png" alt="Bhabu Electricals Logo" class="logo-img">
+                    </a>
+                </div>
+                
+                <div class="nav-menu" id="navMenu">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="services.html">Services</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="ourteam.html" class="active">Our Team</a></li>
+                    </ul>
+                    <a href="contact.html" class="btn-consultation">Contact Us <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="hamburger" id="hamburger">
@@ -610,6 +967,46 @@ backToTopBtn.addEventListener('click', () => {
     });
 });
     </script>
+    
+    <style>
+        /* SweetAlert brand custom styling */
+        .swal2-popup {
+            font-family: 'DM Sans', sans-serif !important;
+            border-radius: 16px !important;
+        }
+        
+        .swal2-confirm {
+            background: linear-gradient(135deg, #F26522, #2196F3) !important;
+            border: none !important;
+            border-radius: 8px !important;
+            padding: 10px 25px !important;
+            font-weight: 600 !important;
+            transition: all 0.3s !important;
+        }
+        
+        .swal2-confirm:hover {
+            transform: translateY(-2px) !important;
+            box-shadow: 0 5px 15px rgba(33,150,243,0.4) !important;
+        }
+        
+        .swal2-icon.swal2-success .swal2-success-ring {
+            border-color: #F26522 !important;
+        }
+        
+        .swal2-icon.swal2-success [class^='swal2-success-line'] {
+            background-color: #F26522 !important;
+        }
+        
+        .swal2-icon.swal2-error {
+            border-color: #F26522 !important;
+        }
+        
+        .swal2-icon.swal2-error [class^='swal2-x-mark-line'] {
+            background-color: #F26522 !important;
+        }
+    </style>
+</body>
+</html>
     
     <style>
         /* SweetAlert brand custom styling */

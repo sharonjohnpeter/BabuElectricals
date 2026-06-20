@@ -54,9 +54,9 @@
                         <li><a href="about.html">About Us</a></li>
                         <li><a href="services.html">Services</a></li>
                         <li><a href="projects.html" class="active">Projects</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="ourteam.html">Our Team</a></li>
                     </ul>
-                    <a href="contact.html" class="btn-consultation">Get Quote <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html" class="btn-consultation">Contact Us <i class="fas fa-arrow-right"></i></a>
                 </div>
                 
                 <div class="hamburger" id="hamburger">
@@ -91,6 +91,22 @@
         </div>
     </section>
 
+        <!-- Filter Buttons Section -->
+    <section class="filter-section" data-aos="fade-up">
+        <div class="container">
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">All Projects</button>
+                <button class="filter-btn" data-filter="textile">Textile</button>
+                <button class="filter-btn" data-filter="industrial">Industrial</button>
+                <button class="filter-btn" data-filter="commercial">Commercial</button>
+                <button class="filter-btn" data-filter="healthcare">Healthcare</button>
+                <button class="filter-btn" data-filter="education">Education</button>
+                <button class="filter-btn" data-filter="infrastructure">Infrastructure</button>
+                <button class="filter-btn" data-filter="solar">Solar</button>
+            </div>
+        </div>
+    </section>
+
     <!-- Featured Projects Section -->
     <section class="featured-projects">
         <div class="container">
@@ -99,8 +115,8 @@
                 <h2>Featured <em>Projects</em></h2>
                 <p>Showcasing our excellence across various sectors</p>
             </div>
-            <div class="projects-showcase">
-                <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="0">
+                        <div class="projects-showcase" id="projectsGrid">
+                <div class="project-showcase-card" data-category="textile" data-aos="fade-up" data-aos-delay="0">
                     <div class="project-showcase-image">
                         <img src="https://images.unsplash.com/photo-1535905554592-2e8e137b4e7d?w=500&h=300&fit=crop" alt="Textile & Retail Projects">
                         <div class="project-overlay">
@@ -118,7 +134,7 @@
                     </div>
                 </div>
 
-                <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="project-showcase-card" data-category="industrial" data-aos="fade-up" data-aos-delay="100">
                     <div class="project-showcase-image">
                         <img src="https://images.unsplash.com/photo-1581091226033-d5c48150dbaa?w=500&h=300&fit=crop" alt="Industrial Projects">
                         <div class="project-overlay">
@@ -136,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="project-showcase-card" data-category="education" data-aos="fade-up" data-aos-delay="200">
                     <div class="project-showcase-image">
                         <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=500&h=300&fit=crop" alt="Educational Institutions">
                         <div class="project-overlay">
@@ -154,7 +170,7 @@
                     </div>
                 </div>
 
-                <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="project-showcase-card" data-category="healthcare" data-aos="fade-up" data-aos-delay="300">
                     <div class="project-showcase-image">
                         <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=500&h=300&fit=crop" alt="Healthcare Projects">
                         <div class="project-overlay">
@@ -172,7 +188,7 @@
                     </div>
                 </div>
 
-                <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="400">
+                <div class="project-showcase-card" data-category="commercial" data-aos="fade-up" data-aos-delay="400">
                     <div class="project-showcase-image">
                         <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=500&h=300&fit=crop" alt="Commercial Buildings">
                         <div class="project-overlay">
@@ -190,7 +206,7 @@
                     </div>
                 </div>
 
-                <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="500">
+                <div class="project-showcase-card" data-category="infrastructure" data-aos="fade-up" data-aos-delay="500">
                     <div class="project-showcase-image">
                         <img src="https://images.unsplash.com/photo-1541888946425-d81bb19240f5?w=500&h=300&fit=crop" alt="HT & Infrastructure">
                         <div class="project-overlay">
@@ -208,7 +224,7 @@
                     </div>
                 </div>
 
-                <div class="project-showcase-card" data-aos="fade-up" data-aos-delay="600">
+                <div class="project-showcase-card" data-category="solar" data-aos="fade-up" data-aos-delay="600">
                     <div class="project-showcase-image">
                         <img src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=500&h=300&fit=crop" alt="Solar Power Installations">
                         <div class="project-overlay">
@@ -224,6 +240,13 @@
                             <span><i class="fas fa-solar-panel"></i> 15+ MW Installed</span>
                         </div>
                     </div>
+                </div>
+
+                <!-- No Results Message -->
+                <div id="noResults" class="no-results" style="display: none;">
+                    <i class="fas fa-search"></i>
+                    <h3>No projects found</h3>
+                    <p>Try selecting a different category to view more projects.</p>
                 </div>
             </div>
         </div>
@@ -691,6 +714,40 @@ backToTopBtn.addEventListener('click', () => {
     window.scrollTo({
         top: 0,
         behavior: 'smooth'
+    });
+});
+
+// ==================== FILTER FUNCTIONALITY ====================
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-showcase-card');
+const noResults = document.getElementById('noResults');
+
+filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+        // Update active button
+        filterButtons.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+        
+        const filterValue = button.getAttribute('data-filter');
+        let visibleCount = 0;
+        
+        projectCards.forEach(card => {
+            if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                card.style.display = 'block';
+                visibleCount++;
+                // Add animation
+                card.style.animation = 'fadeInUp 0.5s ease forwards';
+            } else {
+                card.style.display = 'none';
+            }
+        });
+        
+        // Show/hide no results message
+        if (visibleCount === 0) {
+            noResults.style.display = 'block';
+        } else {
+            noResults.style.display = 'none';
+        }
     });
 });
     </script>

@@ -215,7 +215,7 @@
 .form-icon {
     position: absolute;
     left: 15px;
-    bottom: 14px;
+    bottom: 16px;
     color: var(--text-light);
     font-size: 0.9rem;
     transition: color 0.3s;
@@ -302,6 +302,19 @@
     overflow: hidden;
     margin-bottom: 25px;
     box-shadow: var(--shadow-sm);
+}
+
+.map-wrapper h4 {
+    font-size: 1rem;
+    color: var(--navy);
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.map-wrapper h4 i {
+    color: var(--primary-orange);
 }
 
 .map-wrapper iframe {

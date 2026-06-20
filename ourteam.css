@@ -1,0 +1,335 @@
+/* ============================================
+   BHABU ELECTRICALS - OUR TEAM PAGE STYLES
+   Trusted Electrical Contracting Since 1990
+   ============================================ */
+
+/* ---------- TEAM HERO ---------- */
+.team-hero {
+    min-height: 60vh;
+    background: linear-gradient(135deg, var(--navy) 0%, #0d2557 50%, #102060 100%);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    padding-top: 80px;
+}
+
+.team-hero-content {
+    max-width: 700px;
+    position: relative;
+    z-index: 2;
+    color: var(--white);
+    text-align: center;
+    margin: 0 auto;
+    padding: 80px 0 60px;
+}
+
+.team-hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 900;
+    margin-bottom: 20px;
+}
+
+.team-hero-content h1 em {
+    color: var(--primary-blue);
+    font-style: normal;
+}
+
+.team-hero-content p {
+    font-size: 1.1rem;
+    color: rgba(255,255,255,0.8);
+}
+
+/* ---------- TEAM SECTION ---------- */
+.team-section {
+    padding: 90px 0;
+    background: var(--white);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.team-card {
+    background: var(--white);
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border);
+    padding-bottom: 20px;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--primary-blue);
+}
+
+.team-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 30px auto 0;
+    border: 4px solid var(--lighter-bg);
+    transition: all 0.3s;
+}
+
+.team-card:hover .team-image {
+    border-color: var(--primary-blue);
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-card h4 {
+    font-size: 1.3rem;
+    margin-top: 20px;
+    margin-bottom: 5px;
+    color: var(--navy);
+    font-family: 'Playfair Display', serif;
+}
+
+.team-role {
+    display: inline-block;
+    color: var(--primary-blue);
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 12px;
+}
+
+.team-card p {
+    padding: 0 20px 20px;
+    color: var(--text-mid);
+    font-size: 0.85rem;
+    line-height: 1.5;
+}
+
+.team-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.team-social a {
+    width: 36px;
+    height: 36px;
+    background: var(--lighter-bg);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+    color: var(--navy);
+    text-decoration: none;
+}
+
+.team-social a:hover {
+    background: var(--primary-blue);
+    color: var(--white);
+    transform: translateY(-3px);
+}
+
+/* ---------- WHY WORK WITH US ---------- */
+.why-work-section {
+    padding: 90px 0;
+    background: var(--lighter-bg);
+}
+
+.why-work-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.why-work-card {
+    background: var(--white);
+    padding: 30px 25px;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s;
+    border: 1px solid var(--border);
+}
+
+.why-work-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+    border-color: var(--primary-blue);
+}
+
+.why-work-icon {
+    width: 70px;
+    height: 70px;
+    background: rgba(33,150,243,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: var(--primary-blue);
+    transition: all 0.3s;
+}
+
+.why-work-card:hover .why-work-icon {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    color: var(--white);
+}
+
+.why-work-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    color: var(--navy);
+}
+
+.why-work-card p {
+    color: var(--text-light);
+    font-size: 0.85rem;
+    line-height: 1.6;
+}
+
+/* ---------- CAREERS CTA BOX ---------- */
+.careers-cta-box {
+    background: linear-gradient(135deg, var(--navy), #0d2557);
+    padding: 40px 30px;
+    border-radius: 20px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.careers-cta-box h3 {
+    color: var(--white);
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.careers-cta-box p {
+    color: rgba(255,255,255,0.8);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+
+.careers-cta-box .btn-primary {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-dark));
+    box-shadow: 0 5px 15px rgba(33,150,243,0.3);
+}
+
+.careers-cta-box .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(33,150,243,0.4);
+}
+
+/* ---------- SECTION HEADER ---------- */
+.section-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.section-header .label {
+    display: inline-block;
+    color: var(--primary-blue);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+}
+
+.section-header h2 {
+    font-size: clamp(1.8rem, 3vw, 2.6rem);
+    margin-bottom: 14px;
+    color: var(--navy);
+}
+
+.section-header h2 em {
+    color: var(--primary-blue);
+    font-style: normal;
+}
+
+.section-header p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+/* ---------- RESPONSIVE ---------- */
+@media (max-width: 768px) {
+    .team-hero {
+        padding-top: 100px;
+        min-height: 50vh;
+    }
+    
+    .team-hero-content {
+        padding: 40px 0;
+    }
+    
+    .team-hero-content h1 {
+        font-size: 2rem;
+    }
+    
+    .team-section {
+        padding: 50px 0;
+    }
+    
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        max-width: 400px;
+        margin: 30px auto 0;
+    }
+    
+    .team-image {
+        width: 130px;
+        height: 130px;
+    }
+    
+    .team-card h4 {
+        font-size: 1.1rem;
+    }
+    
+    .why-work-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        margin: 30px auto 0;
+    }
+    
+    .careers-cta-box {
+        padding: 30px 20px;
+        margin-top: 30px;
+    }
+    
+    .careers-cta-box h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .team-hero {
+        padding-top: 80px;
+    }
+    
+    .team-hero-content h1 {
+        font-size: 1.6rem;
+    }
+    
+    .team-image {
+        width: 110px;
+        height: 110px;
+    }
+}

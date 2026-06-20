@@ -75,7 +75,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .logo-img {
     width: 220px;
-    height: 70px;
+    height: 75px;
     border-radius: 8px;
     object-fit: contain;
 }
@@ -220,13 +220,13 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Hero Section */
 .hero {
-    min-height: 100vh;
+    min-height: 90vh;
     background: linear-gradient(135deg, var(--navy) 0%, #0d2557 50%, #102060 100%);
     position: relative;
     overflow: hidden;
     display: flex;
     align-items: center;
-    padding-top: 100px;
+    padding-top: 10px;
 }
 
 .hero-bg-circles {
@@ -1129,8 +1129,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .footer-logo-img {
-    width: 220px;
-    height: 70px;
+    width: 225px;
+    height: 75px;
     border-radius: 8px;
     object-fit: contain;
 }

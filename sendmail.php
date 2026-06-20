@@ -95,28 +95,21 @@ if (!empty($errors)) {
 }
 
 // ========== SMTP CONFIGURATION ==========
-// Replace these with your actual SMTP credentials
 // For Gmail:
 // - Enable 2-Step Verification in your Google Account
 // - Generate an App Password (Google Account > Security > App Passwords)
-// - Use the 16-character app password below
+// - Use the 16-character app password below (WITHOUT spaces)
 
 $smtp_config = [
-    'host' => 'smtp.gmail.com',        // SMTP server (smtp.gmail.com for Gmail)
-    'port' => 587,                      // 587 for TLS, 465 for SSL
-    'auth' => true,                     // Enable authentication
-    'username' => 'bhabuelectricals@gmail.com',  // Your email address
-    'password' => 'YOUR_APP_PASSWORD',  // Your Gmail App Password (NOT your regular password)
-    'encryption' => PHPMailer::ENCRYPTION_STARTTLS  // TLS encryption
+    'host' => 'smtp.gmail.com',
+    'port' => 587,
+    'auth' => true,
+    'username' => 'bhabuelectricals@gmail.com',
+    // IMPORTANT: Get a NEW App Password from Google Account > Security > App Passwords
+    // The password should be 16 characters with NO spaces
+    'password' => 'msur khjw qafk udiw', // REPLACE THIS with your actual app password
+    'encryption' => PHPMailer::ENCRYPTION_STARTTLS
 ];
-
-// For other email providers, use these settings:
-// Outlook/Hotmail:
-// 'host' => 'smtp-mail.outlook.com', 'port' => 587, 'encryption' => PHPMailer::ENCRYPTION_STARTTLS
-// Yahoo:
-// 'host' => 'smtp.mail.yahoo.com', 'port' => 587, 'encryption' => PHPMailer::ENCRYPTION_STARTTLS
-// Zoho:
-// 'host' => 'smtp.zoho.com', 'port' => 587, 'encryption' => PHPMailer::ENCRYPTION_STARTTLS
 
 // Create mailer instance
 $mail = new PHPMailer(true);
@@ -139,18 +132,15 @@ try {
     
     // Recipients - Main email to company
     $mail->setFrom($smtp_config['username'], 'Bhabu Electricals Website');
-    $mail->addAddress('bhabuelectricals@gmail.com', 'Bhabu Electricals'); // Main recipient
+    //$mail->addAddress('bhabuelectricals@gmail.com', 'Bhabu Electricals'); // Main recipient
     $mail->addAddress('sharonpeter313@gmail.com', 'Sharon Peter'); // Additional recipient
     $mail->addReplyTo($email, $name);
-    
-    // Optional: Add CC to another email
-    // $mail->addCC('manager@bhabuelectricals.com', 'Manager');
     
     // Email content
     $mail->isHTML(true);
     $mail->Subject = "New Enquiry from {$name} - Bhabu Electricals";
     
-    // HTML Email Template
+    // HTML Email Template - Fixed syntax error (removed extra 'l')
     $html_content = '
     <!DOCTYPE html>
     <html>
@@ -175,7 +165,7 @@ try {
                 box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             }
             .header {
-                background: linear-gradient(135deg, #F26522, #2196F3);
+                background: linear-gradient(135deg, #2196F3, #1976D2);
                 padding: 30px;
                 text-align: center;
             }
@@ -200,7 +190,7 @@ try {
             .section-title {
                 font-size: 16px;
                 font-weight: 700;
-                color: #F26522;
+                color: #2196F3;
                 margin-bottom: 10px;
                 text-transform: uppercase;
                 letter-spacing: 1px;
@@ -220,18 +210,18 @@ try {
                 margin-top: 5px;
             }
             .footer {
-                background: #1a4a3a;
+                background: #0a1f44;
                 padding: 20px;
                 text-align: center;
                 color: rgba(255,255,255,0.7);
                 font-size: 12px;
             }
             .footer a {
-                color: #F26522;
+                color: #2196F3;
                 text-decoration: none;
             }
             .highlight {
-                color: #F26522;l
+                color: #2196F3;
                 font-weight: 600;
             }
         </style>
@@ -333,7 +323,7 @@ try {
                 box-shadow: 0 4px 15px rgba(0,0,0,0.1);
             }
             .header {
-                background: linear-gradient(135deg, #F26522, #2196F3);
+                background: linear-gradient(135deg, #2196F3, #1976D2);
                 padding: 30px;
                 text-align: center;
             }
@@ -346,7 +336,7 @@ try {
             }
             .btn {
                 display: inline-block;
-                background: linear-gradient(135deg, #F26522, #2196F3);
+                background: linear-gradient(135deg, #2196F3, #1976D2);
                 color: white;
                 padding: 12px 25px;
                 border-radius: 8px;
@@ -371,8 +361,8 @@ try {
                 <p>We have received your enquiry regarding <strong>' . htmlspecialchars($service) . '</strong>.</p>
                 <p>Our team will review your requirements and get back to you within <strong>one business day</strong>.</p>
                 <p>For urgent inquiries, please call us at:</p>
-                <p style="text-align: center; font-size: 24px; font-weight: bold; color: #F26522;">
-                    <a href="tel:+919003434422" style="color: #F26522; text-decoration: none;">+91 90034 34422</a>
+                <p style="text-align: center; font-size: 24px; font-weight: bold; color: #2196F3;">
+                    <a href="tel:+919003434422" style="color: #2196F3; text-decoration: none;">+91 90034 34422</a>
                 </p>
                 <center>
                     <a href="https://wa.me/919003434422" class="btn">📱 Chat on WhatsApp</a>
