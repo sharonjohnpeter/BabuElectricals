@@ -132,7 +132,7 @@ try {
     
     // Recipients - Main email to company
     $mail->setFrom($smtp_config['username'], 'Bhabu Electricals Website');
-    //$mail->addAddress('bhabuelectricals@gmail.com', 'Bhabu Electricals'); // Main recipient
+    $mail->addAddress('bhabuelectricals@gmail.com', 'Bhabu Electricals'); // Main recipient
     $mail->addAddress('sharonpeter313@gmail.com', 'Sharon Peter'); // Additional recipient
     $mail->addReplyTo($email, $name);
     
